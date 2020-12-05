@@ -1,0 +1,32 @@
+<div class="container-fluid" *ngIf="weatherData">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-4 col-sm-12 col-xs-12">
+      <div class="card p-4">
+        <div class="d-flex">
+          <h6 class="flex-grow-1">{{weatherData?.city}}</h6>
+          <h6>16:08</h6>
+        </div>
+        <div class="d-flex flex-column temp mt-5 mb-3">
+          <h1 class="mb-0 font-weight-bold" id="heading"> {{getTemperatureInCelsius() | number:'2.1-2'}}° C </h1> <span class="small grey">Stormy</span>
+        </div>
+        <div class="d-flex">
+          <div class="temp-details flex-grow-1">
+            <p class="my-1"> Wind <span> {{weatherData?.windSpeed}} km/h </span> </p>
+            <p class="my-1"> <i class="fa fa-tint mr-2" aria-hidden="true"></i>Humidity <span>  {{weatherData?.humidity | percent}} </span> </p>
+          </div>
+          <div>  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form class="mt-4">
+  <div class="form-group w-25">
+    <label class="mr-sm-2" for="city">Write down the name of the city</label>
+    <input id="city" class="form-control" type="text" (change)="onWeatherCityChange($event.target.value)" name="weatherCity">
+  </div>
+  <button type="submit" class="btn btn-dark" (click)="onSubmit()">Change</button>
+</form>
+
+
