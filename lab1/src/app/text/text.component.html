@@ -1,0 +1,5 @@
+<p>text works!</p>
+<input [(ngModel)]="font">
+<button (click)="show(true)">button</button>
+<p [ngStyle]="{ 'font-size': font+'px'}" *ngIf="isShown">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cupiditate doloribus
+  laborum nesciunt nobis sint.</p>

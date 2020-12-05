@@ -1,0 +1,7 @@
+<label>Введите свое имя</label>
+  <input [(ngModel)]="name" placeholder="{{name}}" />
+<br><br>
+
+<button (click)="countIncrease()">Click me</button>
+<label class="1">Count = {{count}}</label>
+<p *ngIf="status">Поздравляю, вам нечем занятся</p>

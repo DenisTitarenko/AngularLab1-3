@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+  <style>
+    body {
+      font-family: "Lucida Console";
+    }
+    label {
+      width: 150px;
+      display: inline-block;
+      cursor: pointer;
+    }
+    form {
+      width: 500px;
+      margin: 20px auto;
+    }
+    fieldset {
+      border: 3px double #ccc;
+      border-radius: 3px;
+      margin: 20px 0;
+    }
+    h1 {
+      font-size: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<h1>Веб форма для пользователей</h1>
+  <button (click)="change()">Log in</button>
+  <form *ngIf="ifLogged" action="" method="post" class="" onsubmit="">
+  <fieldset>
+    <app-home></app-home>
+
+    <app-items></app-items>
+
+    <app-hz></app-hz>
+
+    <p italic *ngIf="show">ghjhg</p>
+
+    <fieldset>
+      <app-text (isShown)="isShown()"></app-text>
+    </fieldset>
+  <p><input type="submit" value="Submit" italic></p>
+  </fieldset>
+  </form>
+</body>
+</html>
+
+
+
